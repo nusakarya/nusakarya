@@ -9,7 +9,13 @@ defineProps<{
 </script>
 
 <template>
-  <article class="card card--package reveal" data-reveal :data-delay="delay ?? 0">
+  <article
+    class="card card--package reveal"
+    :class="{ 'card--featured': item.featured }"
+    data-reveal
+    :data-delay="delay ?? 0"
+  >
+    <p v-if="item.featured" class="featured-badge">Paling Populer</p>
     <p class="chip">Paket</p>
     <h3>{{ item.name }}</h3>
     <p><strong>Untuk:</strong> {{ item.forWho }}</p>

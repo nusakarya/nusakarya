@@ -16,10 +16,11 @@ import { siteConfig } from '../../data/site'
         <article
           v-for="(reason, index) in siteConfig.whyUs"
           :key="reason"
-          class="card reveal"
+          class="card why-card reveal"
           data-reveal
           :data-delay="index * 70"
         >
+          <span class="why-card__icon" aria-hidden="true">✓</span>
           <p>{{ reason }}</p>
         </article>
       </div>

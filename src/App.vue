@@ -24,8 +24,9 @@ useReveal()
 
 <template>
   <div class="page-shell">
+    <a class="skip-link" href="#main-content">Langsung ke konten utama</a>
     <TheNavbar />
-    <main>
+    <main id="main-content" tabindex="-1">
       <HeroSection />
       <ServicesSection />
       <PortfolioSection />

@@ -42,6 +42,7 @@ export const packageItems: PackageItem[] = [
     timeline: 'Estimasi 4-8 minggu',
     priceNote: 'Diskusi Kebutuhan MVP',
     ctaLabel: 'Diskusi MVP',
+    featured: true,
   },
   {
     id: 'custom-system',

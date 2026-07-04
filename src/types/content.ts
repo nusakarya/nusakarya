@@ -24,6 +24,7 @@ export type PackageItem = {
   timeline: string
   priceNote: string
   ctaLabel: string
+  featured?: boolean
 }
 
 export type FaqItem = {

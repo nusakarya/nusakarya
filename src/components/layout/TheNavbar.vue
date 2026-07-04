@@ -77,7 +77,23 @@ onUnmounted(() => {
         :aria-expanded="isOpen"
         @click="isOpen = !isOpen"
       >
-        Menu
+        <svg
+          class="navbar__toggle-icon"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          aria-hidden="true"
+        >
+          <line v-if="!isOpen" x1="4" y1="7" x2="20" y2="7" />
+          <line v-if="!isOpen" x1="4" y1="12" x2="20" y2="12" />
+          <line v-if="!isOpen" x1="4" y1="17" x2="20" y2="17" />
+          <template v-else>
+            <line x1="6" y1="6" x2="18" y2="18" />
+            <line x1="18" y1="6" x2="6" y2="18" />
+          </template>
+        </svg>
       </button>
       <nav id="mobile-main-nav" class="navbar__menu" :class="{ 'navbar__menu--open': isOpen }">
         <a
