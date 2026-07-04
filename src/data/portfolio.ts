@@ -31,4 +31,19 @@ export const portfolioItems: PortfolioItem[] = [
     techCategory: 'Company Profile Website (Brand Presence)',
     ctaLabel: 'Lihat Project',
   },
+  {
+    id: 'katalog-instan-umkm',
+    title: 'Katalog Instan Gratis untuk UMKM',
+    url: 'https://katalog.nusakarya.id/k/contoh',
+    problemSolved:
+      'Banyak UMKM belum punya media digital untuk memajang produk dan menerima pesanan online.',
+    keyFeatures: [
+      'Generator katalog online gratis',
+      'Tombol pesan langsung via WhatsApp',
+      'Kode QR siap cetak untuk dipajang di toko',
+      'Dashboard admin untuk pantau dan kelola data',
+    ],
+    techCategory: 'Web App Self-Serve (Lead Generation Tool)',
+    ctaLabel: 'Lihat Contoh',
+  },
 ]
