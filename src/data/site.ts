@@ -10,7 +10,7 @@ export const siteConfig = {
   trustStatement:
     'Ramah untuk bisnis kecil, proses jelas, dan fokus pada hasil.',
   whatsappLink:
-    'https://wa.me/6285234905742?text=Halo%20NusaKarya%2C%20saya%20ingin%20diskusi%20kebutuhan%20project.',
+    'https://wa.me/6285156845470?text=Halo%20NusaKarya%2C%20saya%20ingin%20diskusi%20kebutuhan%20project.',
   email: 'halo@nusakarya.id',
   location: 'Indonesia',
   navLinks: [
