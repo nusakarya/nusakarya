@@ -6,6 +6,15 @@ export type ServiceItem = {
   useCase: string
 }
 
+export type PortfolioAccent = 'teal' | 'amber' | 'sky' | 'violet'
+
+export type PortfolioScreenshot = {
+  src: string
+  alt: string
+  width: number
+  height: number
+}
+
 export type PortfolioItem = {
   id: string
   title: string
@@ -14,6 +23,13 @@ export type PortfolioItem = {
   keyFeatures: string[]
   techCategory: string
   ctaLabel: string
+  tags: string[]
+  accent: PortfolioAccent
+  featured?: boolean
+  isNew?: boolean
+  tagline?: string
+  secondaryLink?: { label: string; url: string }
+  screenshots?: PortfolioScreenshot[]
 }
 
 export type PackageItem = {

@@ -10,6 +10,7 @@ import { faqItems } from '../../data/faq'
       <SectionHeader
         class="reveal"
         data-reveal
+        eyebrow="FAQ"
         title="Pertanyaan yang Sering Ditanyakan"
         subtitle="Hal penting yang biasanya ditanyakan sebelum project dimulai."
       />

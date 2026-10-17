@@ -9,6 +9,7 @@ import { siteConfig } from '../../data/site'
       <SectionHeader
         class="reveal"
         data-reveal
+        eyebrow="Proses"
         title="Proses Kerja yang Jelas & Transparan"
         subtitle="Kami menjaga alur project tetap terarah agar hasil cepat digunakan."
       />

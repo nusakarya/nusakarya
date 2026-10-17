@@ -10,6 +10,7 @@ import { services } from '../../data/services'
       <SectionHeader
         class="reveal"
         data-reveal
+        eyebrow="Layanan"
         title="Layanan Utama NusaKarya"
         subtitle="Solusi digital praktis untuk operasional, pemasaran, dan pertumbuhan bisnis Anda."
       />

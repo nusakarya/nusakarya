@@ -15,6 +15,11 @@ const highlights = [
     <div class="hero-blob hero-blob--two" aria-hidden="true"></div>
     <div class="container hero__grid">
       <div class="reveal" data-reveal>
+        <a class="hero-announce" href="#portfolio">
+          <span class="hero-announce__badge">Baru</span>
+          <span>Bilas: aplikasi kasir laundry &amp; cuci sepatu</span>
+          <span aria-hidden="true">→</span>
+        </a>
         <p class="eyebrow">{{ siteConfig.tagline }}</p>
         <h1>{{ siteConfig.heroHeadline }}</h1>
         <p class="lead">{{ siteConfig.heroSubheadline }}</p>

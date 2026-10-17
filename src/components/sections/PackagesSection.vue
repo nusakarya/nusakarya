@@ -10,6 +10,7 @@ import { packageItems } from '../../data/packages'
       <SectionHeader
         class="reveal"
         data-reveal
+        eyebrow="Paket"
         title="Paket Fleksibel Sesuai Tahap Bisnis"
         subtitle="Mulai dari kebutuhan sederhana dulu, lalu berkembang sesuai prioritas."
       />

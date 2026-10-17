@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { siteConfig } from '../../data/site'
+import { portfolioItems } from '../../data/portfolio'
 </script>
 
 <template>
@@ -19,12 +20,16 @@ import { siteConfig } from '../../data/site'
         </a>
       </div>
       <div>
-        <h3>Domain</h3>
-        <p>{{ siteConfig.domain }}</p>
-        <p class="footer__copy">
-          © {{ new Date().getFullYear() }} NusaKarya. All rights reserved.
-        </p>
+        <h3>Project Terbaru</h3>
+        <ul class="footer__links">
+          <li v-for="item in portfolioItems" :key="item.id">
+            <a :href="item.url" target="_blank" rel="noopener noreferrer">{{ item.title }}</a>
+          </li>
+        </ul>
       </div>
     </div>
+    <p class="container footer__copy">
+      © {{ new Date().getFullYear() }} NusaKarya · {{ siteConfig.domain }}. All rights reserved.
+    </p>
   </footer>
 </template>

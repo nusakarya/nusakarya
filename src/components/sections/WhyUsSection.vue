@@ -9,6 +9,7 @@ import { siteConfig } from '../../data/site'
       <SectionHeader
         class="reveal"
         data-reveal
+        eyebrow="Kenapa NusaKarya"
         title="Kenapa Banyak Bisnis Kecil Cocok dengan NusaKarya"
         subtitle="Kami bangun software yang relevan, bukan yang berlebihan."
       />

@@ -68,7 +68,10 @@ onUnmounted(() => {
 <template>
   <header class="navbar" :class="{ 'navbar--scrolled': isScrolled }">
     <div class="container navbar__inner">
-      <a class="navbar__brand" href="#top">{{ siteConfig.brand }}</a>
+      <a class="navbar__brand" href="#top">
+        <img src="/favicon.svg" alt="" width="28" height="28" />
+        <span>{{ siteConfig.brand }}</span>
+      </a>
       <button
         class="navbar__toggle"
         type="button"

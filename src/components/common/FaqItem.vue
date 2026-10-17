@@ -11,7 +11,18 @@ defineProps<{
   <details class="faq-item reveal" data-reveal :data-delay="delay ?? 0">
     <summary>
       <span>{{ item.question }}</span>
-      <span class="faq-item__icon" aria-hidden="true">⌄</span>
+      <svg
+        class="faq-item__icon"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <polyline points="6 9 12 15 18 9" />
+      </svg>
     </summary>
     <p>{{ item.answer }}</p>
   </details>
