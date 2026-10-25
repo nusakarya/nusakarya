@@ -414,6 +414,14 @@
     @apply lg:order-first lg:p-8;
   }
 
+  .portfolio-card--flip .portfolio-card__body {
+    @apply lg:order-last;
+  }
+
+  .portfolio-card--flip {
+    @apply lg:grid-cols-[1.15fr_1fr];
+  }
+
   .portfolio-card--featured h3 {
     @apply text-2xl md:text-3xl;
   }
@@ -423,6 +431,34 @@
     background:
       radial-gradient(circle at 70% 20%, rgb(255 255 255 / 0.7), transparent 55%),
       linear-gradient(135deg, var(--accent-from), var(--accent-to));
+  }
+
+  .portfolio-shots--browser {
+    @apply min-h-0 items-center px-5 py-8 sm:min-h-0 sm:px-8;
+  }
+
+  .browser-frame {
+    @apply m-0 w-full overflow-hidden rounded-xl border border-slate-200 bg-white shadow-2xl transition-transform duration-500;
+  }
+
+  .browser-frame__bar {
+    @apply flex items-center gap-1.5 border-b border-slate-200 bg-slate-50 px-3 py-2;
+  }
+
+  .browser-frame__bar span {
+    @apply h-2 w-2 flex-none rounded-full bg-slate-300;
+  }
+
+  .card .browser-frame__bar p {
+    @apply ml-2 truncate rounded bg-white px-2 py-0.5 text-[11px] text-slate-500;
+  }
+
+  .browser-frame img {
+    @apply block h-auto w-full;
+  }
+
+  .portfolio-card--featured:hover .browser-frame {
+    transform: translateY(-6px);
   }
 
   .phone-frame {
@@ -636,6 +672,12 @@
   --accent-ink: theme('colors.sky.800');
 }
 
+.portfolio-card--indigo {
+  --accent-from: theme('colors.indigo.50');
+  --accent-to: theme('colors.blue.200');
+  --accent-ink: theme('colors.blue.700');
+}
+
 .portfolio-card--violet {
   --accent-from: theme('colors.violet.50');
   --accent-to: theme('colors.fuchsia.100');
@@ -670,6 +712,8 @@
   }
 
   .phone-frame,
+  .browser-frame,
+  .portfolio-card--featured:hover .browser-frame,
   .portfolio-card--featured:hover .phone-frame--front {
     transition: none;
     transform: none;

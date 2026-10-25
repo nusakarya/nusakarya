@@ -3,6 +3,11 @@ import SectionHeader from '../common/SectionHeader.vue'
 import PortfolioCard from '../common/PortfolioCard.vue'
 import { portfolioItems } from '../../data/portfolio'
 import { siteConfig } from '../../data/site'
+
+// Alternate featured cards so their screenshots sit on opposite sides.
+const flipped = new Set(
+  portfolioItems.filter((item) => item.featured).filter((_, i) => i % 2 === 1).map((item) => item.id),
+)
 </script>
 
 <template>
@@ -20,6 +25,7 @@ import { siteConfig } from '../../data/site'
           v-for="(item, index) in portfolioItems"
           :key="item.id"
           :item="item"
+          :flip="flipped.has(item.id)"
           :delay="Math.min(index * 80, 240)"
         />
       </div>

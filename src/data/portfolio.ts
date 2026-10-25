@@ -2,6 +2,37 @@ import type { PortfolioItem } from '../types/content'
 
 export const portfolioItems: PortfolioItem[] = [
   {
+    id: 'nusakarya-captcha',
+    title: 'Nusa Karya Captcha: Captcha Geser Puzzle',
+    url: 'https://captcha.nusakarya.id/',
+    tagline: 'Lindungi formulir situs dari bot, tanpa menyusahkan pengunjung.',
+    problemSolved:
+      'Formulir daftar, login, dan kontak dibanjiri spam dan akun palsu, sementara captcha biasa merepotkan pengunjung asli.',
+    keyFeatures: [
+      'Cukup satu geseran puzzle, di HP maupun laptop',
+      'Berlapis: lubang pengecoh, proof of work, batas percobaan',
+      'Skor risiko dari jejak geseran untuk backend',
+      'Opsi "Cara lain" yang ramah keyboard & pembaca layar',
+      'Kompatibel dengan format siteverify Cloudflare Turnstile',
+      'Konsol: statistik harian & email peringatan serangan',
+    ],
+    techCategory: 'SaaS Keamanan Web (Widget + API + Konsol)',
+    ctaLabel: 'Lihat Project',
+    tags: ['SaaS', 'Keamanan', 'Developer Tool'],
+    accent: 'indigo',
+    featured: true,
+    isNew: true,
+    screenshotFrame: 'browser',
+    screenshots: [
+      {
+        src: '/img/portfolio/captcha-beranda.jpg',
+        alt: 'Halaman produk Nusa Karya Captcha dengan demo captcha geser puzzle pada formulir daftar',
+        width: 1440,
+        height: 855,
+      },
+    ],
+  },
+  {
     id: 'bilas-kasir-laundry',
     title: 'Bilas: Kasir Laundry & Cuci Sepatu',
     url: 'https://bilas.nusakarya.id/',
@@ -21,8 +52,8 @@ export const portfolioItems: PortfolioItem[] = [
     tags: ['Mobile App', 'SaaS', 'Kasir / POS'],
     accent: 'sky',
     featured: true,
-    isNew: true,
     secondaryLink: { label: 'Demo Halaman Lacak', url: 'https://lacak.nusakarya.id/o/demo' },
+    screenshotFrame: 'phone',
     screenshots: [
       {
         src: '/img/portfolio/bilas-beranda.jpg',

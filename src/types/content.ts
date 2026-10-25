@@ -6,7 +6,7 @@ export type ServiceItem = {
   useCase: string
 }
 
-export type PortfolioAccent = 'teal' | 'amber' | 'sky' | 'violet'
+export type PortfolioAccent = 'teal' | 'amber' | 'sky' | 'violet' | 'indigo'
 
 export type PortfolioScreenshot = {
   src: string
@@ -30,6 +30,7 @@ export type PortfolioItem = {
   tagline?: string
   secondaryLink?: { label: string; url: string }
   screenshots?: PortfolioScreenshot[]
+  screenshotFrame?: 'phone' | 'browser'
 }
 
 export type PackageItem = {

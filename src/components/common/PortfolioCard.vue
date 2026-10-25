@@ -5,19 +5,43 @@ import type { PortfolioItem } from '../../types/content'
 const props = defineProps<{
   item: PortfolioItem
   delay?: number
+  flip?: boolean
 }>()
 
 const host = computed(() => new URL(props.item.url).host)
+const isBrowserFrame = computed(() => props.item.screenshotFrame === 'browser')
 </script>
 
 <template>
   <article
     class="card portfolio-card reveal"
-    :class="[`portfolio-card--${item.accent}`, { 'portfolio-card--featured': item.featured }]"
+    :class="[
+      `portfolio-card--${item.accent}`,
+      { 'portfolio-card--featured': item.featured, 'portfolio-card--flip': flip },
+    ]"
     data-reveal
     :data-delay="delay ?? 0"
   >
-    <div v-if="item.featured && item.screenshots?.length" class="portfolio-shots">
+    <div
+      v-if="item.featured && item.screenshots?.length && isBrowserFrame"
+      class="portfolio-shots portfolio-shots--browser"
+    >
+      <figure class="browser-frame">
+        <div class="browser-frame__bar" aria-hidden="true">
+          <span></span><span></span><span></span>
+          <p>{{ host }}</p>
+        </div>
+        <img
+          :src="item.screenshots[0].src"
+          :alt="item.screenshots[0].alt"
+          :width="item.screenshots[0].width"
+          :height="item.screenshots[0].height"
+          loading="lazy"
+          decoding="async"
+        />
+      </figure>
+    </div>
+    <div v-else-if="item.featured && item.screenshots?.length" class="portfolio-shots">
       <figure
         v-for="(shot, index) in item.screenshots"
         :key="shot.src"
