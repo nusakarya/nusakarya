@@ -29,7 +29,8 @@ import { portfolioItems } from '../../data/portfolio'
       </div>
     </div>
     <p class="container footer__copy">
-      © {{ new Date().getFullYear() }} NusaKarya · {{ siteConfig.domain }}. All rights reserved.
+      © {{ new Date().getFullYear() }} NusaKarya · {{ siteConfig.domain }}. All rights reserved. ·
+      <a href="/privasi">Kebijakan privasi</a>
     </p>
   </footer>
 </template>
